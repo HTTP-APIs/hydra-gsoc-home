@@ -375,6 +375,50 @@ CONTENT = '''
         <hr>
       </div>
 
+
+
+      <div class="idea">
+
+        <h3>7. Support Redis as Graph database</h3>
+        <br>
+        <h4>Description</h4>
+        <p class="lead font-weight-normal">Graph based data is everywhere now days, Facebook, Google, Twitter and Pinterest are only a few who've realize the power behind relationship data and are utilizing it to the fullest, as a direct result we see a rise both in interest and variety
+          of graph data solutions.</p>
+        <p class="lead font-weight-normal">RedisGraph is a graph database developed from scratch on top of Redis, using the new Redis Modules API to extend Redis with new commands and capabilities. Its main features include: - Simple, fast indexing and querying - Data stored in RAM, using
+          memory-efficient custom data structures - On disk persistence - Tabular result sets - Simple and popular graph query language (Cypher) - Data Filtering, Aggregation and ordering.</p>
+        <p class="lead font-weight-normal">
+          Currently Hydrus uses a relational database model to store graph data. It would be interesting to switch to a graph databasee like Redis. We need to implement a multi-layered hexastore to store graph data. This will also help in the implementation of
+          <b>Idea #2 - Better API querying</b>.
+        </p>
+        <h4>Skills Required</h4>
+        <ul class="lead font-weight-normal">
+          <li>Python</li>
+          <li>Git</li>
+          <li>Flask</li>
+          <li>Basic knowledge of graph databases</li>
+          <li>Ability to learn new technologies quickly</li>
+          <li>Basic knowledge of Semantic Web</li>
+          <li>Ability to write test suites</li>
+        </ul>
+
+        <h4>Difficulty Level - Intermediate</h4>
+        <h4>Related Links</h4>
+        <ul class="lead font-weight-normal">
+          <li><a href="http://redisgraph.io/design/">Redis Graph : A graph database module for Redis</a> </li>
+          <li><a href="https://redis.io/topics/indexes#representing-and-querying-graphs-using-an-hexastore">Paper on representing and querying graphs using an hexastore.</a> </li>
+        </ul>
+        <h4>Potential Mentors</h4>
+        <p class="lead font-weight-normal">
+          <a href="https://www.linkedin.com/in/lorenzomoriondo/">Lorenzo Moriondo</a>,
+          <a href="https://www.linkedin.com/in/xadahiya/">Akshay Dahiya</a>,
+          <a href="https://www.linkedin.com/in/chrizandr/">Chris Andrew</a>,
+          <a href="https://www.linkedin.com/in/kristian-koci-1304a025/">Kristian Koci</a>,
+          <a href="https://www.linkedin.com/in/matteofranchi">Matteo Franchi</a>
+        </p>
+        <hr>
+      </div>
+
+
       <h2>Ideas Related to Demos using Hydrus</h2>
       <hr>
       <div class="idea">
