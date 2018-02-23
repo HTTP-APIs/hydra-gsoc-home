@@ -34,7 +34,6 @@ CONTENT = '''
   </nav>
 
 
-
   <div class="container mt-5 pt-5">
 
     <div class="banner text-center">
@@ -138,14 +137,16 @@ CONTENT = '''
       <a class="anchor" id="ideas"></a>
 
       <h1 class="display-4">Project Ideas</h1>
-      <p class="lead font-weight-normal">The ideas are arranged in increasing order of difficulty. Please feel free to combine several ideas into your proposal.</p>
       <br>
-      <h2>Ideas Related to Hydrus</h2>
-
+      <p class="lead font-weight-normal"> <b>NOTE:</b> Every student should apply for any (up to three) of the macro-task (ideas) listed below. Every macro-task involves participating in different activities (listed for every task). Students can build a proposal by choosing a macro-task and then
+        detail which activities and how they want to carry on.</p>
+      <br>
+      <h2>1. Ideas related to improving Hydrus</h2>
       <hr>
+      <br>
       <div class="idea">
 
-        <h3>1. Design a Command line interface for Hydrus</h3>
+        <h3>1.1 Design a Command line interface for Hydrus</h3>
         <br>
         <h4>Description</h4>
         <p class="lead font-weight-normal">Although Hydrus is primarily a Python-based library right now, most Hydra users may not be familiar with Python to set up servers. It would be great if we could have a CLI for Hydrus where users would just need to pass parameters to set up a server
@@ -184,7 +185,7 @@ CONTENT = '''
 
       <div class="idea">
 
-        <h3>2. Better API Querying</h3>
+        <h3>1.2 Better API Querying</h3>
         <br>
         <h4>Description</h4>
         <p class="lead font-weight-normal">Right now, we only have no mechanism for searching an instance of a class in the Hydra API. Most APIs implement a search feature where the data is queried using a defined syntax. This is more of an issue with Hydra itself as the mechanism for
@@ -219,6 +220,300 @@ CONTENT = '''
         </p>
         <hr>
       </div>
+
+      <div class="idea">
+
+        <h3>1.3 More User defined Controls for the server</h3>
+        <br>
+        <h4>Description</h4>
+        <p class="lead font-weight-normal">There is no way right now to actually change the way the client accesses the server set up by Hydrus. Although there is some support for Authentication/Authorization, the actual implementations are very basic and do not offer much security features.
+          There is also no way to control server access or limit/modify user privilege. There may be APIs that provide different levels of access to different users. There are also bottlenecks in place in REST APIs that limit the number of requests each
+          user can make, such control is not given to users. There needs to be a way to add additional controls to the server, that can be built on top of the original Hydrus app.</p>
+        <h4>Skills Required</h4>
+        <ul class="lead font-weight-normal">
+          <li>Python</li>
+          <li>Git</li>
+          <li>Flask</li>
+          <li>Strong knowledge of Authentication and Authorization in various APIs</li>
+          <li>Basic knowledge of Semantic Web</li>
+          <li>Ability to learn new technologies quickly</li>
+          <li>Ability to write test suites</li>
+        </ul>
+
+        <h4>Difficulty Level - Intermediate</h4>
+        <h4>Related Links</h4>
+        <ul class="lead font-weight-normal">
+          <li><a href="https://github.com/HTTP-APIs/hydrus">Hydus Github Repo</a> </li>
+        </ul>
+        <h4>Potential Mentors</h4>
+        <p class="lead font-weight-normal">
+          <a href="https://www.linkedin.com/in/lorenzomoriondo/">Lorenzo Moriondo</a>,
+          <a href="https://www.linkedin.com/in/xadahiya/">Akshay Dahiya</a>,
+          <a href="https://www.linkedin.com/in/chrizandr/">Chris Andrew</a>,
+          <a href="https://www.linkedin.com/in/kristian-koci-1304a025/">Kristian Koci</a>,
+          <a href="https://www.linkedin.com/in/matteofranchi">Matteo Franchi</a>
+        </p>
+        <hr>
+      </div>
+
+
+      <div class="idea">
+
+        <h3>1.4 Support Redis as Graph database</h3>
+        <br>
+        <h4>Description</h4>
+        <p class="lead font-weight-normal">Graph based data is everywhere now days, Facebook, Google, Twitter and Pinterest are only a few who've realize the power behind relationship data and are utilizing it to the fullest, as a direct result we see a rise both in interest and variety
+          of graph data solutions.</p>
+        <p class="lead font-weight-normal">RedisGraph is a graph database developed from scratch on top of Redis, using the new Redis Modules API to extend Redis with new commands and capabilities. Its main features include: - Simple, fast indexing and querying - Data stored in RAM, using
+          memory-efficient custom data structures - On disk persistence - Tabular result sets - Simple and popular graph query language (Cypher) - Data Filtering, Aggregation and ordering.</p>
+        <p class="lead font-weight-normal">
+          Currently Hydrus uses a relational database model to store graph data. It would be interesting to switch to a graph databasee like Redis. We need to implement a multi-layered hexastore to store graph data. This will also help in the implementation of
+          <b>Idea #1.2 - Better API querying</b>.
+        </p>
+        <h4>Skills Required</h4>
+        <ul class="lead font-weight-normal">
+          <li>Python</li>
+          <li>Git</li>
+          <li>Flask</li>
+          <li>Basic knowledge of graph databases</li>
+          <li>Ability to learn new technologies quickly</li>
+          <li>Basic knowledge of Semantic Web</li>
+          <li>Ability to write test suites</li>
+        </ul>
+
+        <h4>Difficulty Level - Intermediate</h4>
+        <h4>Related Links</h4>
+        <ul class="lead font-weight-normal">
+          <li><a href="http://redisgraph.io/design/">Redis Graph : A graph database module for Redis</a> </li>
+          <li><a href="https://redis.io/topics/indexes#representing-and-querying-graphs-using-an-hexastore">Paper on representing and querying graphs using an hexastore.</a> </li>
+        </ul>
+        <h4>Potential Mentors</h4>
+        <p class="lead font-weight-normal">
+          <a href="https://www.linkedin.com/in/lorenzomoriondo/">Lorenzo Moriondo</a>,
+          <a href="https://www.linkedin.com/in/xadahiya/">Akshay Dahiya</a>,
+          <a href="https://www.linkedin.com/in/chrizandr/">Chris Andrew</a>,
+          <a href="https://www.linkedin.com/in/kristian-koci-1304a025/">Kristian Koci</a>,
+          <a href="https://www.linkedin.com/in/matteofranchi">Matteo Franchi</a>
+        </p>
+        <hr>
+      </div>
+
+
+
+      <div class="idea">
+
+        <h3>1.5 Open API to Hydra Parser</h3>
+        <br>
+        <h4>Description</h4>
+        <p class="lead font-weight-normal">The OpenAPI Specification (OAS) defines a standard, programming language-agnostic interface description for REST APIs, which allows both humans and computers to discover and understand the capabilities of a service without requiring access to
+          source code, additional documentation, or inspection of network traffic.</p>
+        <p class="lead font-weight-normal">OpenAPI and Hydra do much of the same thing and it would be great to have an interface to convert OpenAPI definitions to Hydra API Documentation.</p>
+
+        <h4>Skills Required</h4>
+        <ul class="lead font-weight-normal">
+          <li>Python</li>
+          <li>Flask</li>
+          <li>HYDRA</li>
+          <li>REST APIs</li>
+          <li>Ability to learn new technologies quickly</li>
+          <li>Basic knowledge of Semantic Web</li>
+          <li>Ability to write test suites</li>
+        </ul>
+
+        <h4>Difficulty Level - Intermediate</h4>
+        <h4>Related Links</h4>
+        <ul class="lead font-weight-normal">
+          <li><a href="https://github.com/OAI/OpenAPI-Specification">OpenAPI Spec</a> </li>
+          <li><a href="https://www.hydra-cg.com/spec/latest/core/">Hydra Draft</a> </li>
+        </ul>
+        <h4>Potential Mentors</h4>
+        <p class="lead font-weight-normal">
+          <a href="https://www.linkedin.com/in/lorenzomoriondo/">Lorenzo Moriondo</a>,
+          <a href="https://www.linkedin.com/in/xadahiya/">Akshay Dahiya</a>,
+          <a href="https://www.linkedin.com/in/chrizandr/">Chris Andrew</a>,
+          <a href="https://www.linkedin.com/in/kristian-koci-1304a025/">Kristian Koci</a>,
+          <a href="https://www.linkedin.com/in/matteofranchi">Matteo Franchi</a>
+        </p>
+        <hr>
+      </div>
+
+
+
+      <div class="idea">
+
+        <h3>1.6 Keep Hydrus up-to-date with Hydra Specs</h3>
+        <br>
+        <h4>Description</h4>
+        <p class="lead font-weight-normal">Hydra <a href="https://github.com/HydraCG/Specifications/issues" target="_blank">
+                  Draft Specs</a> are evolving and Hydrus needs to follow the most recent updates in the Specs. Code has to be amended to implement new features.</p>
+        <h4>Required Skills</h4>
+        <ul class="lead font-weight-normal">
+          <li>Python</li>
+          <li>Git</li>
+          <li>Good Knowledge of Semantic Web and REST paradigm</li>
+          <li>High problem-solving abilities</li>
+          <li>Ability to write test suites</li>
+        </ul>
+
+        <h4>Difficulty Level - Hard</h4>
+        <h4>Related Links</h4>
+        <ul class="lead font-weight-normal">
+          <li>Hydra <a href="https://github.com/HydraCG/Specifications/issues" target="_blank">Draft Specs</a></li>
+        </ul>
+        <h4>Potential Mentors</h4>
+        <p class="lead font-weight-normal">
+          <a href="https://www.linkedin.com/in/lorenzomoriondo/">Lorenzo Moriondo</a>,
+          <a href="https://www.linkedin.com/in/xadahiya/">Akshay Dahiya</a>,
+          <a href="https://www.linkedin.com/in/chrizandr/">Chris Andrew</a>,
+          <a href="https://www.linkedin.com/in/kristian-koci-1304a025/">Kristian Koci</a>,
+          <a href="https://www.linkedin.com/in/matteofranchi">Matteo Franchi</a>
+        </p>
+        <hr>
+      </div>
+
+
+      <div class="idea">
+
+        <h3>1.7 Be Creative</h3>
+        <br>
+        <h4>Description</h4>
+        <p class="lead font-weight-normal">Have any ideas of your own? Please feel free to integrate those into your proposal. It'll help your proposal stand out and will increase your chances of being accepted.</p>
+        <h4>Skills Required</h4>
+        <ul class="lead font-weight-normal">
+          <li>To be decided ...</li>
+        </ul>
+
+        <h4>Difficulty Level - Interesting</h4>
+
+        <h4>Potential Mentors</h4>
+        <p class="lead font-weight-normal">
+          <a href="https://www.linkedin.com/in/lorenzomoriondo/">Lorenzo Moriondo</a>,
+          <a href="https://www.linkedin.com/in/xadahiya/">Akshay Dahiya</a>,
+          <a href="https://www.linkedin.com/in/chrizandr/">Chris Andrew</a>,
+          <a href="https://www.linkedin.com/in/kristian-koci-1304a025/">Kristian Koci</a>,
+          <a href="https://www.linkedin.com/in/matteofranchi">Matteo Franchi</a>
+        </p>
+        <hr>
+      </div>
+      <br>
+
+      <h2>2. Ideas Related to Demos using Hydrus</h2>
+      <hr>
+      <br>
+
+
+      <div class="idea">
+
+        <h3>2.1 Implement Satellite and Subsystems Demo</h3>
+        <br>
+        <h4>Description</h4>
+        <p class="lead font-weight-normal">We may finally end up implementing the astronomy/satellites vocabulary as thought in the beginning. We need a way to demonstrate how Hydra can be utilized by Satellites to communicate with each other and get information about each of their subsystems
+          and statuses. The OWL Vocabulary for Subsystems is given <a href="https://github.com/chronos-pramantha/RDFvocab">here</a>. We need to create a Hydra Spec for a demo system that will use these ontologies for a demo.</p>
+        <h4>Required Skills</h4>
+        <ul class="lead font-weight-normal">
+          <li>Python</li>
+          <li>Linux</li>
+          <li>Server Management</li>
+          <li>At least basic knowledge of DevOps</li>
+          <li>HTML, CSS, JS</li>
+          <li>Knowledge of any Javascript framework is a plus ( React Js or Vue Js)</li>
+          <li>Basic Knowledge of Semantic Web</li>
+          <li>High problem-solving abilities</li>
+          <li>Ability to write test suites</li>
+        </ul>
+
+        <h4>Difficulty Level - Intermediate to Hard</h4>
+        <h4>Related Links</h4>
+        <ul class="lead font-weight-normal">
+          <li><a href="https://github.com/HTTP-APIs/hydrus">Hydus Github Repo</a> </li>
+          <li><a href="https://github.com/HTTP-APIs/hydra-flock-demo">A sample drone simulation</a> </li>
+        </ul>
+        <h4>Potential Mentors</h4>
+        <p class="lead font-weight-normal">
+          <a href="https://www.linkedin.com/in/lorenzomoriondo/">Lorenzo Moriondo</a>,
+          <a href="https://www.linkedin.com/in/xadahiya/">Akshay Dahiya</a>,
+          <a href="https://www.linkedin.com/in/chrizandr/">Chris Andrew</a>,
+          <a href="https://www.linkedin.com/in/kristian-koci-1304a025/">Kristian Koci</a>,
+          <a href="https://www.linkedin.com/in/matteofranchi">Matteo Franchi</a>
+        </p>
+        <hr>
+      </div>
+
+
+      <div class="idea">
+
+        <h3>2.2 Improve the flock demo</h3>
+        <br>
+        <h4>Description</h4>
+        <p class="lead font-weight-normal">We had created a demo using drones and a forestry simulation that communicated in real time to measure temperatures in a forest region. There could be a lot of improvements added to this simulation to add more use cases for Hydra/Hydrus and implementing
+          them in the simulation.</p>
+        <h4>Required Skills</h4>
+        <ul class="lead font-weight-normal">
+          <li>Python</li>
+          <li>Linux</li>
+          <li>Hydra</li>
+          <li>Server Management</li>
+          <li>At least basic knowledge of DevOps</li>
+          <li>HTML, CSS, JS</li>
+          <li>Knowledge of any Javascript framework is a plus ( React Js or Vue Js)</li>
+          <li>Basic Knowledge of Semantic Web</li>
+          <li>High problem-solving abilities</li>
+          <li>Ability to write test suites</li>
+        </ul>
+
+        <h4>Difficulty Level - Intermediate</h4>
+        <h4>Related Links</h4>
+        <ul class="lead font-weight-normal">
+          <li><a href="https://github.com/HTTP-APIs/hydrus">Hydus Github Repo</a> </li>
+          <li><a href="https://github.com/HTTP-APIs/hydra-flock-demo">A sample drone simulation</a> </li>
+        </ul>
+        <h4>Potential Mentors</h4>
+        <p class="lead font-weight-normal">
+          <a href="https://www.linkedin.com/in/lorenzomoriondo/">Lorenzo Moriondo</a>,
+          <a href="https://www.linkedin.com/in/xadahiya/">Akshay Dahiya</a>,
+          <a href="https://www.linkedin.com/in/chrizandr/">Chris Andrew</a>,
+          <a href="https://www.linkedin.com/in/kristian-koci-1304a025/">Kristian Koci</a>,
+          <a href="https://www.linkedin.com/in/matteofranchi">Matteo Franchi</a>
+        </p>
+        <hr>
+      </div>
+
+
+      <div class="idea">
+
+        <h3>2.3 Implement demos for early stage API standards</h3>
+        <br>
+        <h4>Description</h4>
+        <p class="lead font-weight-normal">There are many early stage API standards such as WFS-3.0 or Open-EO that are developed for geospatial applications. A cool demo could be developed that uses some geospatial application built using these standards and ports it to Hydrus. This idea
+          is not limited to geo-spatial domains. You could use any API standard that allows two applications to communicate and use Hydra/Hydrus as an interface between them.</p>
+        <h4>Required Skills</h4>
+        <ul class="lead font-weight-normal">
+          <li>Python</li>
+          <li>Linux</li>
+          <li>Hydra and Hydrus</li>
+          <li>OpenEO/WFS/Any other API Standard for some application</li>
+          <li>Basic Knowledge of Semantic Web and Hydra</li>
+          <li>Ability to write test suites</li>
+        </ul>
+
+        <h4>Difficulty Level - Intermediate</h4>
+        <h4>Related Links</h4>
+        <ul class="lead font-weight-normal">
+          <li><a href="https://github.com/HTTP-APIs/hydrus">Hydrus</a> </li>
+          <li><a href="http://r-spatial.org/2016/11/29/openeo.html">OpenEO</a> </li>
+          <li><a href="https://github.com/opengeospatial/WFS_FES">WFS</a> </li>
+        </ul>
+        <h4>Potential Mentors</h4>
+        <p class="lead font-weight-normal">
+          <a href="https://www.linkedin.com/in/lorenzomoriondo/">Lorenzo Moriondo</a>,
+          <a href="https://www.linkedin.com/in/xadahiya/">Akshay Dahiya</a>,
+          <a href="https://www.linkedin.com/in/chrizandr/">Chris Andrew</a>,
+          <a href="https://www.linkedin.com/in/kristian-koci-1304a025/">Kristian Koci</a>,
+          <a href="https://www.linkedin.com/in/matteofranchi">Matteo Franchi</a>
+        </p>
+        <hr>
+      </div>
+
 
       <div class="idea">
 
@@ -298,45 +593,10 @@ CONTENT = '''
         <hr>
       </div>
 
-      <div class="idea">
-
-        <h3>5. More User defined Controls for the server</h3>
-        <br>
-        <h4>Description</h4>
-        <p class="lead font-weight-normal">There is no way right now to actually change the way the client accesses the server set up by Hydrus. Although there is some support for Authentication/Authorization, the actual implementations are very basic and do not offer much security features.
-          There is also no way to control server access or limit/modify user privilege. There may be APIs that provide different levels of access to different users. There are also bottlenecks in place in REST APIs that limit the number of requests each
-          user can make, such control is not given to users. There needs to be a way to add additional controls to the server, that can be built on top of the original Hydrus app.</p>
-        <h4>Skills Required</h4>
-        <ul class="lead font-weight-normal">
-          <li>Python</li>
-          <li>Git</li>
-          <li>Flask</li>
-          <li>Strong knowledge of Authentication and Authorization in various APIs</li>
-          <li>Basic knowledge of Semantic Web</li>
-          <li>Ability to learn new technologies quickly</li>
-          <li>Ability to write test suites</li>
-        </ul>
-
-        <h4>Difficulty Level - Intermediate</h4>
-        <h4>Related Links</h4>
-        <ul class="lead font-weight-normal">
-          <li><a href="https://github.com/HTTP-APIs/hydrus">Hydus Github Repo</a> </li>
-        </ul>
-        <h4>Potential Mentors</h4>
-        <p class="lead font-weight-normal">
-          <a href="https://www.linkedin.com/in/lorenzomoriondo/">Lorenzo Moriondo</a>,
-          <a href="https://www.linkedin.com/in/xadahiya/">Akshay Dahiya</a>,
-          <a href="https://www.linkedin.com/in/chrizandr/">Chris Andrew</a>,
-          <a href="https://www.linkedin.com/in/kristian-koci-1304a025/">Kristian Koci</a>,
-          <a href="https://www.linkedin.com/in/matteofranchi">Matteo Franchi</a>
-        </p>
-        <hr>
-      </div>
-
 
       <div class="idea">
 
-        <h3>6. Django-rest-hydra</h3>
+        <h3>5. Django-rest-hydra</h3>
         <br>
         <h4>Description</h4>
         <p class="lead font-weight-normal">Hydrus is developed in Flask because the applications we had in mind were mostly related to IoT and sensors, so it was supposed to be lightweight and functional. But if we may want to look for more traditional applications and the wider public,
@@ -376,173 +636,9 @@ CONTENT = '''
       </div>
 
 
-
       <div class="idea">
 
-        <h3>7. Support Redis as Graph database</h3>
-        <br>
-        <h4>Description</h4>
-        <p class="lead font-weight-normal">Graph based data is everywhere now days, Facebook, Google, Twitter and Pinterest are only a few who've realize the power behind relationship data and are utilizing it to the fullest, as a direct result we see a rise both in interest and variety
-          of graph data solutions.</p>
-        <p class="lead font-weight-normal">RedisGraph is a graph database developed from scratch on top of Redis, using the new Redis Modules API to extend Redis with new commands and capabilities. Its main features include: - Simple, fast indexing and querying - Data stored in RAM, using
-          memory-efficient custom data structures - On disk persistence - Tabular result sets - Simple and popular graph query language (Cypher) - Data Filtering, Aggregation and ordering.</p>
-        <p class="lead font-weight-normal">
-          Currently Hydrus uses a relational database model to store graph data. It would be interesting to switch to a graph databasee like Redis. We need to implement a multi-layered hexastore to store graph data. This will also help in the implementation of
-          <b>Idea #2 - Better API querying</b>.
-        </p>
-        <h4>Skills Required</h4>
-        <ul class="lead font-weight-normal">
-          <li>Python</li>
-          <li>Git</li>
-          <li>Flask</li>
-          <li>Basic knowledge of graph databases</li>
-          <li>Ability to learn new technologies quickly</li>
-          <li>Basic knowledge of Semantic Web</li>
-          <li>Ability to write test suites</li>
-        </ul>
-
-        <h4>Difficulty Level - Intermediate</h4>
-        <h4>Related Links</h4>
-        <ul class="lead font-weight-normal">
-          <li><a href="http://redisgraph.io/design/">Redis Graph : A graph database module for Redis</a> </li>
-          <li><a href="https://redis.io/topics/indexes#representing-and-querying-graphs-using-an-hexastore">Paper on representing and querying graphs using an hexastore.</a> </li>
-        </ul>
-        <h4>Potential Mentors</h4>
-        <p class="lead font-weight-normal">
-          <a href="https://www.linkedin.com/in/lorenzomoriondo/">Lorenzo Moriondo</a>,
-          <a href="https://www.linkedin.com/in/xadahiya/">Akshay Dahiya</a>,
-          <a href="https://www.linkedin.com/in/chrizandr/">Chris Andrew</a>,
-          <a href="https://www.linkedin.com/in/kristian-koci-1304a025/">Kristian Koci</a>,
-          <a href="https://www.linkedin.com/in/matteofranchi">Matteo Franchi</a>
-        </p>
-        <hr>
-      </div>
-
-
-      <h2>Ideas Related to Demos using Hydrus</h2>
-      <hr>
-      <div class="idea">
-
-        <h3>1. Demonstration with Dynamic API paths</h3>
-        <br>
-        <h4>Description</h4>
-        <p class="lead font-weight-normal">If we can create an API whose structure(paths to different kinds of data) is constantly changing only the vocab path stays same. Then we can use a Hydra client to discover the required paths for various kinds of data. This can be a great way to
-          demonstrate the capabilities and use cases of HTTP-APIs and Hydra in general. We can have a UI showing the API structure in real-time and allow users to POST/GET/PUT/DELETE any type of data. We can also show how the client and API server interact
-          with each other ( We had a lot of requests going on in the drone demo and it was very difficult to understand how things are working in the background.) For example: Suppose we have a Student class with basic properties like Name, Id, Class
-          etc. Then the user can request for data say "Students with Id = 1*" without knowing anything about the API structure as it's dynamic. We can also demonstrate advanced querying features with this.</p>
-        <h4>Required Skills</h4>
-        <ul class="lead font-weight-normal">
-          <li>Python</li>
-          <li>Linux</li>
-          <li>Server Management</li>
-          <li>At least basic knowledge of DevOps</li>
-          <li>HTML, CSS, JS</li>
-          <li>Knowledge of any Javascript framework is a plus ( React Js or Vue Js)</li>
-          <li>Basic Knowledge of Semantic Web</li>
-          <li>High problem-solving abilities</li>
-          <li>Ability to write test suites</li>
-        </ul>
-
-        <h4>Difficulty Level - Intermediate to Hard</h4>
-        <h4>Related Links</h4>
-        <ul class="lead font-weight-normal">
-          <li><a href="https://github.com/HTTP-APIs/hydrus">Hydus Github Repo</a> </li>
-          <li><a href="https://github.com/HTTP-APIs/hydra-flock-demo">A sample drone simulation</a> </li>
-        </ul>
-        <h4>Potential Mentors</h4>
-        <p class="lead font-weight-normal">
-          <a href="https://www.linkedin.com/in/lorenzomoriondo/">Lorenzo Moriondo</a>,
-          <a href="https://www.linkedin.com/in/xadahiya/">Akshay Dahiya</a>,
-          <a href="https://www.linkedin.com/in/chrizandr/">Chris Andrew</a>,
-          <a href="https://www.linkedin.com/in/kristian-koci-1304a025/">Kristian Koci</a>,
-          <a href="https://www.linkedin.com/in/matteofranchi">Matteo Franchi</a>
-        </p>
-        <hr>
-      </div>
-
-      <div class="idea">
-
-        <h3>2. Satellite and Subsystems Demo</h3>
-        <br>
-        <h4>Description</h4>
-        <p class="lead font-weight-normal">We may finally end up implementing the astronomy/satellites vocabulary as thought in the beginning. We need a way to demonstrate how Hydra can be utilized by Satellites to communicate with each other and get information about each of their subsystems
-          and statuses. The OWL Vocabulary for Subsystems is given <a href="https://github.com/chronos-pramantha/RDFvocab">here</a>. We need to create a Hydra Spec for a demo system that will use these ontologies for a demo.</p>
-        <h4>Required Skills</h4>
-        <ul class="lead font-weight-normal">
-          <li>Python</li>
-          <li>Linux</li>
-          <li>Server Management</li>
-          <li>At least basic knowledge of DevOps</li>
-          <li>HTML, CSS, JS</li>
-          <li>Knowledge of any Javascript framework is a plus ( React Js or Vue Js)</li>
-          <li>Basic Knowledge of Semantic Web</li>
-          <li>High problem-solving abilities</li>
-          <li>Ability to write test suites</li>
-        </ul>
-
-        <h4>Difficulty Level - Intermediate to Hard</h4>
-        <h4>Related Links</h4>
-        <ul class="lead font-weight-normal">
-          <li><a href="https://github.com/HTTP-APIs/hydrus">Hydus Github Repo</a> </li>
-          <li><a href="https://github.com/HTTP-APIs/hydra-flock-demo">A sample drone simulation</a> </li>
-        </ul>
-        <h4>Potential Mentors</h4>
-        <p class="lead font-weight-normal">
-          <a href="https://www.linkedin.com/in/lorenzomoriondo/">Lorenzo Moriondo</a>,
-          <a href="https://www.linkedin.com/in/xadahiya/">Akshay Dahiya</a>,
-          <a href="https://www.linkedin.com/in/chrizandr/">Chris Andrew</a>,
-          <a href="https://www.linkedin.com/in/kristian-koci-1304a025/">Kristian Koci</a>,
-          <a href="https://www.linkedin.com/in/matteofranchi">Matteo Franchi</a>
-        </p>
-        <hr>
-      </div>
-
-
-      <div class="idea">
-
-        <h3>3. Rail Management System</h3>
-        <br>
-        <h4>Description</h4>
-        <p class="lead font-weight-normal">We can have a cool demo about railway management where trains are routed based on available tracks and are assigned platforms and routes based on live information taken from several trains. This could be a good demo to showcase how Hydra can be
-          used as a generic language since not all railway stations would use the same API to convey information to trains. We could have multiple Hydra based APIs running on railway stations and trains and all of them communicating with each other using
-          Hydra and a common Vocabulary. We still need to find a vocabulary for this, or we could also create one.</p>
-        <h4>Required Skills</h4>
-        <ul class="lead font-weight-normal">
-          <li>Python</li>
-          <li>Linux</li>
-          <li>Server Management</li>
-          <li>At least basic knowledge of DevOps</li>
-          <li>HTML, CSS, JS</li>
-          <li>Knowledge of any Javascript framework is a plus ( React Js or Vue Js)</li>
-          <li>Basic Knowledge of Semantic Web</li>
-          <li>High problem-solving abilities</li>
-          <li>Ability to write test suites</li>
-        </ul>
-
-        <h4>Difficulty Level - Intermediate to Hard</h4>
-        <h4>Related Links</h4>
-        <ul class="lead font-weight-normal">
-          <li><a href="https://github.com/HTTP-APIs/hydrus">Hydus Github Repo</a> </li>
-          <li><a href="https://github.com/HTTP-APIs/hydra-flock-demo">A sample drone simulation</a> </li>
-        </ul>
-        <h4>Potential Mentors</h4>
-        <p class="lead font-weight-normal">
-          <a href="https://www.linkedin.com/in/lorenzomoriondo/">Lorenzo Moriondo</a>,
-          <a href="https://www.linkedin.com/in/xadahiya/">Akshay Dahiya</a>,
-          <a href="https://www.linkedin.com/in/chrizandr/">Chris Andrew</a>,
-          <a href="https://www.linkedin.com/in/kristian-koci-1304a025/">Kristian Koci</a>,
-          <a href="https://www.linkedin.com/in/matteofranchi">Matteo Franchi</a>
-        </p>
-        <hr>
-      </div>
-
-      <h2>Other Ideas</h2>
-      <hr>
-
-
-      <div class="idea">
-
-        <h3>1. Create a QGIS plugin</h3>
+        <h3>6. Create a QGIS plugin</h3>
         <br>
         <h4>Description</h4>
         <p class="lead font-weight-normal">Create a QGIS plugin that works with hydrus. QGIS is an opensource geospatial client, geospatial clients are used to load maps in different formats (images, rasters, vectors). QGIS can work as an HTTP client to fetch data from special Web services
@@ -564,38 +660,6 @@ CONTENT = '''
           <li><a href="https://qgis.org/en/site/">QGIS Homepage</a> </li>
           <li><a href="https://github.com/qgis">QGIS Github Repo</a> </li>
           <li><a href="https://en.wikipedia.org/wiki/Open_Geospatial_Consortium#Standards">OpenGeoSpatial Consortium Web standards</a> </li>
-        </ul>
-        <h4>Potential Mentors</h4>
-        <p class="lead font-weight-normal">
-          <a href="https://www.linkedin.com/in/lorenzomoriondo/">Lorenzo Moriondo</a>,
-          <a href="https://www.linkedin.com/in/xadahiya/">Akshay Dahiya</a>,
-          <a href="https://www.linkedin.com/in/chrizandr/">Chris Andrew</a>,
-          <a href="https://www.linkedin.com/in/kristian-koci-1304a025/">Kristian Koci</a>,
-          <a href="https://www.linkedin.com/in/matteofranchi">Matteo Franchi</a>
-        </p>
-        <hr>
-      </div>
-
-      <div class="idea">
-
-        <h3>2. Keep Hydrus up-to-date with Hydra Specs</h3>
-        <br>
-        <h4>Description</h4>
-        <p class="lead font-weight-normal">Hydra <a href="https://github.com/HydraCG/Specifications/issues" target="_blank">
-            Draft Specs</a> are evolving and Hydrus needs to follow the most recent updates in the Specs. Code has to be amended to implement new features.</p>
-        <h4>Required Skills</h4>
-        <ul class="lead font-weight-normal">
-          <li>Python</li>
-          <li>Git</li>
-          <li>Good Knowledge of Semantic Web and REST paradigm</li>
-          <li>High problem-solving abilities</li>
-          <li>Ability to write test suites</li>
-        </ul>
-
-        <h4>Difficulty Level - Hard</h4>
-        <h4>Related Links</h4>
-        <ul class="lead font-weight-normal">
-          <li>Hydra <a href="https://github.com/HydraCG/Specifications/issues" target="_blank">Draft Specs</a></li>
         </ul>
         <h4>Potential Mentors</h4>
         <p class="lead font-weight-normal">
