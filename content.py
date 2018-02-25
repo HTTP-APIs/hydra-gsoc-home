@@ -513,6 +513,83 @@ CONTENT = '''
         </p>
         <hr>
       </div>
+      
+      <div class="idea">
+
+        <h3>2.4 Demonstration with Dynamic API paths</h3>
+        <br>
+        <h4>Description</h4>
+        <p class="lead font-weight-normal">If we can create an API whose structure(paths to different kinds of data) is constantly changing only the vocab path stays same. Then we can use a Hydra client to discover the required paths for various kinds of data. This can be a great way to
+          demonstrate the capabilities and use cases of HTTP-APIs and Hydra in general. We can have a UI showing the API structure in real-time and allow users to POST/GET/PUT/DELETE any type of data. We can also show how the client and API server interact
+          with each other ( We had a lot of requests going on in the drone demo and it was very difficult to understand how things are working in the background.) For example: Suppose we have a Student class with basic properties like Name, Id, Class
+          etc. Then the user can request for data say "Students with Id = 1*" without knowing anything about the API structure as it's dynamic. We can also demonstrate advanced querying features with this.</p>
+        <h4>Required Skills</h4>
+        <ul class="lead font-weight-normal">
+          <li>Python</li>
+          <li>Linux</li>
+          <li>Server Management</li>
+          <li>At least basic knowledge of DevOps</li>
+          <li>HTML, CSS, JS</li>
+          <li>Knowledge of any Javascript framework is a plus ( React Js or Vue Js)</li>
+          <li>Basic Knowledge of Semantic Web</li>
+          <li>High problem-solving abilities</li>
+          <li>Ability to write test suites</li>
+        </ul>
+
+        <h4>Difficulty Level - Intermediate to Hard</h4>
+        <h4>Related Links</h4>
+        <ul class="lead font-weight-normal">
+          <li><a href="https://github.com/HTTP-APIs/hydrus">Hydus Github Repo</a> </li>
+          <li><a href="https://github.com/HTTP-APIs/hydra-flock-demo">A sample drone simulation</a> </li>
+        </ul>
+        <h4>Potential Mentors</h4>
+        <p class="lead font-weight-normal">
+          <a href="https://www.linkedin.com/in/lorenzomoriondo/">Lorenzo Moriondo</a>,
+          <a href="https://www.linkedin.com/in/xadahiya/">Akshay Dahiya</a>,
+          <a href="https://www.linkedin.com/in/chrizandr/">Chris Andrew</a>,
+          <a href="https://www.linkedin.com/in/kristian-koci-1304a025/">Kristian Koci</a>,
+          <a href="https://www.linkedin.com/in/matteofranchi">Matteo Franchi</a>
+        </p>
+        <hr>
+      </div>
+
+      <div class="idea">
+
+        <h3>2.5 Rail Management System</h3>
+        <br>
+        <h4>Description</h4>
+        <p class="lead font-weight-normal">We can have a cool demo about railway management where trains are routed based on available tracks and are assigned platforms and routes based on live information taken from several trains. This could be a good demo to showcase how Hydra can be
+          used as a generic language since not all railway stations would use the same API to convey information to trains. We could have multiple Hydra based APIs running on railway stations and trains and all of them communicating with each other using
+          Hydra and a common Vocabulary. We still need to find a vocabulary for this, or we could also create one.</p>
+        <h4>Required Skills</h4>
+        <ul class="lead font-weight-normal">
+          <li>Python</li>
+          <li>Linux</li>
+          <li>Server Management</li>
+          <li>At least basic knowledge of DevOps</li>
+          <li>HTML, CSS, JS</li>
+          <li>Knowledge of any Javascript framework is a plus ( React Js or Vue Js)</li>
+          <li>Basic Knowledge of Semantic Web</li>
+          <li>High problem-solving abilities</li>
+          <li>Ability to write test suites</li>
+        </ul>
+
+        <h4>Difficulty Level - Intermediate to Hard</h4>
+        <h4>Related Links</h4>
+        <ul class="lead font-weight-normal">
+          <li><a href="https://github.com/HTTP-APIs/hydrus">Hydus Github Repo</a> </li>
+          <li><a href="https://github.com/HTTP-APIs/hydra-flock-demo">A sample drone simulation</a> </li>
+        </ul>
+        <h4>Potential Mentors</h4>
+        <p class="lead font-weight-normal">
+          <a href="https://www.linkedin.com/in/lorenzomoriondo/">Lorenzo Moriondo</a>,
+          <a href="https://www.linkedin.com/in/xadahiya/">Akshay Dahiya</a>,
+          <a href="https://www.linkedin.com/in/chrizandr/">Chris Andrew</a>,
+          <a href="https://www.linkedin.com/in/kristian-koci-1304a025/">Kristian Koci</a>,
+          <a href="https://www.linkedin.com/in/matteofranchi">Matteo Franchi</a>
+        </p>
+        <hr>
+      </div>
 
 
       <div class="idea">
@@ -558,7 +635,7 @@ CONTENT = '''
 
       <div class="idea">
 
-        <h3>4. Switch to Python Falcon server</h3>
+        <h3>4. Support Falcon based server</h3>
         <br>
         <h4>Description</h4>
         <p class="lead font-weight-normal">Falcon is a minimalist WSGI library for building speedy web APIs and app backends. When it comes to building HTTP APIs, other frameworks weigh you down with tons of dependencies and unnecessary abstractions. Falcon cuts to the chase with a clean
