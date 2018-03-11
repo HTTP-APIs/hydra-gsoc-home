@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Ideas page for GSoC 2018 | Python Hydra</title>
+  <style media="screen">
+    a.anchor {
+      display: block;
+      position: relative;
+      top: -80px;
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top align-items-center p-3 px-md-4 bg-white border-bottom box-shadow">
+    <h5 class="my-0 mr-md-auto font-weight-normal"> <img src="https://www.hydra-cg.com/img/logo.png" class= "pr-2"width="55px" alt="Hydra CG logo"><a href="https://hydra-cg.com/" style=" text-decoration: none !important; color:black">Python HYDRA</a> </h5>
+    <div class="my-2 my-md-0 mr-md-3">
+      <a class="p-2 text-dark d-none d-md-inline d-xl-inline" href="#inspiration">Our Inspiration</a>
+      <a class="p-2 text-dark  d-none d-md-inline d-xl-inline" href="#hydrus">About Hydrus</a>
+      <a class="p-2 text-dark  d-none d-md-inline d-xl-inline" href="#getting-started">Getting Started</a>
+    </div>
+    <a class="btn btn-outline-primary d-none d-sm-inline d-md-inline d-xl-inline" href="#ideas">Project Ideas</a>
+  </nav>
+  <div class="container mt-5 pt-5">
+    <div class="banner text-center">
+      <h1>Hydra W3C Community</h1>
+      <h2>Ideas Page for Google Summer of Code 2018</h2>
+    </div>
+    <div class="px-1 py-1 pt-md-5 mx-auto">
+      <a class="anchor" id="inspiration"></a>
+      <h1 class="display-4">Our Inspiration</h1>
+      <p class="lead font-weight-normal">
+        Building Web APIs seems still more an art than a science. How can we build APIs such that generic clients can easily use them? And how do we build those clients? Current APIs heavily rely on out-of-band information such as human-readable documentation
+        and API-specific SDKs. However, this only allows for very simple and brittle clients that are hardcoded against specific APIs. Hydra, in contrast, is a set of technologies that allow to design APIs in a different manner, in a way that enables
+        smarter clients.
+        <br>You can read more <a href="https://www.hydra-cg.com/">here</a>
+      </p>
+    </div>
+    <hr>
+    <div class="px-1 py-1 pb-md-4 mx-auto">
+      <a class="anchor" id="hydrus"></a>
+      <h1 class="display-4">About Hydrus</h1>
+      <p class="lead  font-weight-normal">
+        Hydrus is a set of Python based tools for easier and efficient creation of Hypermedia driven REST-APIs. Hydrus utilises the power of <a href="https://en.wikipedia.org/wiki/Linked_data">Linked Data</a> to create a powerful REST APIs to serve data.
+        Hydrus uses the <a href="https://www.hydra-cg.com/">Hydra(W3C)</a> standard for creation and documentation of it's APIs.
+      </p>
+      <h3>Features</h3>
+      <ul class="lead  font-weight-normal">
+        <li>A client that can understand Hydra vocabulary and interacts with a Hydra supporting server to basic <a href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> operations on data.</li>
+        <li>A generic server that can serve required data and metadata(in the form of API documentation) to a client over HTTP.</li>
+        <li>A middleware that allows users to use the client to interact with the server using Natural Language which is processed machine consumable language. (under developement)</li>
+      </ul>
+    </div>
+    <hr>
+    <div class="px-1 py-1 pb-md-4 mx-auto">
+      <a class="anchor" id="getting-started"></a>
+      <h1 class="display-4">How do I get started ?</h1>
+      <p class="lead  font-weight-normal">
+        Getting started is pretty easy. Head over to our <a href="https://www.hydra-cg.com/">community page</a>. There are a lot of demos, presentations, and talks to get you up to speed. Then head over to the <a href="https://github.com/HTTP-APIs/hydrus">Hydrus repo</a>        and clone it. Play with it a little, try to understand how the current implementation works, try to fix some bugs or report any issues you can find <a href="https://github.com/HTTP-APIs/hydrus/issues">here</a>.
+        <br> Lastly, don't hesitate to reach out in the <a href="https://gitter.im/HTTP-APIs/Lobby" target="_blank">Gitter channel</a> if you have any question, we are very friendly people and we'll be more than happy to help you out.
+      </p>
+      <p class="lead  font-weight-normal">As a general entrypoint to understand the repositories, there is the <a href="https://github.com/HTTP-APIs/hydrus/wiki">Hydrus Wiki</a> and related links. Having a clear insight of <a href="https://goo.gl/TCdYG3">Resource Description Framework</a>        is quite necessary, Mentors will give full support to catch up with it.</p>
+      <br>
+      <div class="faq lead font-weight-normal">
+        <h3>FAQ</h3>
+        <details>
+          <summary>What is Google Summer of Code?</summary>
+          <hr>
+          <p>Google Summer of Code (GSoC) is a global program that matches students up with open source, free software and technology-related organizations to write code and get paid to do it! The organizations provide mentors who act as guides through the
+            entire process, from learning about the community to contributing code. The idea is to get students involved in and familiar with the open source community and help them to put their summer break to good use.</p>
+          <p>You can read Google <a href="https://developers.google.com/open-source/gsoc/resources/guide#student_manual">Student Manual</a> for more info.</p>
+          <hr>
+        </details>
+        <details>
+          <summary>How to write a proposal?</summary>
+          <hr>
+          <p>Writing a good proposal can be a really challenging task. We have curated a list of helpful resources to help you get started.</p>
+          <ul>
+            <li>
+              <a href="http://people.csail.mit.edu/baghdadi/TXT_blog/5_advices_to_get_your_proposal_accepted.lyx.html">5 Tips to get your Google Summer of Code proposal accepted</a>
+            </li>
+            <li>
+              <a href="https://www.quora.com/How-to-write-a-good-GSoC-proposal">How to write a good GSoC proposal (Quora) ?</a>
+            </li>
+            <li>
+              <a href="http://teom.org/blog/kde/how-to-write-a-kick-ass-proposal-for-google-summer-of-code/">How to write a kick-ass proposal for Google Summer of Code</a>
+            </li>
+          </ul>
+          <hr>
+        </details>
+        <details>
+          <summary>Proposal template</summary>
+          <hr>
+          <p><a href="https://docs.google.com/document/d/1qPR02o6jY4uFBdCf3S0ous4LG32YCe6ZJuDGojXH2JY/edit">Here</a>'s a proposal template for you to get started.</p>
+          <hr>
+        </details>
+      </div>
+      <br>
+      <h3>Communication Channels</h3>
+      <ul class="lead  font-weight-normal">
+        <li><a href="https://gitter.im/HTTP-APIs/Lobby">Gitter</a> </li>
+        <li><a href="https://www.w3.org/community/hydra/">W3C Group</a> </li>
+        <li>
+          <span>Email</span>
+          <ul>
+            <li><a href="mailto:tunedconsulting@gmail.com">Lorenzo Moriondo</a> </li>
+            <li><a href="mailto:xadahiya@gmail.com">Akshay Dahiya</a> </li>
+            <li><a href="mailto:chrisandrew119@gmail.com">Chris Andrew</a> </li>
+            <li><a href="mailto:kristian.koci@gmail.com">Kristian Koci</a> </li>
+            <li><a href="mailto:damrgrass@gmail.com">Matteo Franchi</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <hr>
+    {% include "info.html" %}
+    <div id="disqus_thread"></div>
+    <script>
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document,
+          s = d.createElement('script');
+        s.src = 'https://hydra-gsoc.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  </div>
+  <footer class="footer text-center pb-2">
+    <div class="container">
+      <span class="">Made with <img src="https://img00.deviantart.net/9855/i/2016/130/b/7/undertale___pixel_heart_thingy_by_aspalax-da1zkgz.png" alt="love" width="20px"> by Hydra Community Group.</span>
+    </div>
+  </footer>
+</body>
+</html>

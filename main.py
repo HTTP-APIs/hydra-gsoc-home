@@ -1,17 +1,23 @@
-# main.py
+from flask import Flask, request, jsonify, make_response, render_template, redirect
+import yaml
 
-import webapp2
-from content import CONTENT
+DEBUG = False
+app = Flask(__name__)
+app.debug = DEBUG
 
-class Home(webapp2.RequestHandler):
-    def get(self):
-        
-        # Create links to the Login handler.
-        self.response.write(CONTENT)
+@app.route('/')
+def handler():
+    # load a YAML file with text content
+    with open("content.yaml", 'r') as stream:
+        try:
+            yaml_text = yaml.load(stream)
+        except yaml.YAMLError as exc:
+            raise exc
+    # parse the YAML file into a variables
+    idea = yaml_text['content']
+    total = len(idea)
+    return render_template("index.html", idea=idea, total=total)
 
 
-# Create routes.
-ROUTES = [webapp2.Route(r'/', Home)]
-
-# Instantiate the webapp2 WSGI application.
-app = webapp2.WSGIApplication(ROUTES, debug=True)
+if __name__ == '__main__':
+	app.run()

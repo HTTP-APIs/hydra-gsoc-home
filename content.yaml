@@ -1,0 +1,387 @@
+content:
+  - Idea:
+      Topic: Ideas related to improving Hydrus
+      sub_ideas:
+        - ideas:
+            sub_topic: Design a Command line interface for Hydrus
+            Description :
+              - Although Hydrus is primarily a Python-based library right now, most Hydra users may not be familiar with Python to set up servers. It would be great if we could have a CLI for Hydrus where users would just need to pass parameters to set up a server and get it up and running. Also, the current process of server setup is long and needs a lot of prerequisite knowledge to be able to set up. This process needs to be abstracted to make it simpler, and more powerful for a user to have more control over the server. Maybe something similar to Python’s SimpleHTTPServer.
+            SkillsRequired :
+              - Python
+              - Git
+              - Flask
+              - Command Line
+              - Basic knowledge of Semantic Web and Graph Databases
+              - Ability to learn new technologies quickly
+              - Ability to write test suites
+            DifficultyLevel : Easy to Intermediate
+            RelatedLinks:
+              - link:
+                  name: Hydrus Repo
+                  url: https://github.com/HTTP-APIs/hydrus
+              - link:
+                  name: Hydrus Wiki
+                  url: https://github.com/HTTP-APIs/hydrus/wiki
+              - link:
+                  name: The Book of Hydrus
+                  url: https://gsocchrizandr.wordpress.com/the-book-of-hydrus
+              - link:
+                  name: Hydra Draft
+                  url: https://www.hydra-cg.com/spec/latest/core
+            PotentialMentors:
+              - mentor:
+                  name: Lorenzo Moriondo
+                  url: https://www.linkedin.com/in/lorenzomoriondo/
+              - mentor:
+                  name: Akshay Dahiya
+                  url: https://www.linkedin.com/in/xadahiya/
+              - mentor:
+                  name: Chris Andrew
+                  url: https://www.linkedin.com/in/chrizandr/
+              - mentor:
+                  name: Kristian Koci
+                  url: https://www.linkedin.com/in/kristian-koci-1304a025/
+              - mentor:
+                  name: Matteo Franchi
+                  url: https://www.linkedin.com/in/matteofranchi
+
+        - ideas:
+            sub_topic: Better API Querying
+            Description :
+              - Right now, we only have no mechanism for searching an instance of a class in the Hydra API. Most APIs implement a search feature where the data is queried using a defined syntax. This is more of an issue with Hydra itself as the mechanism for search is not defined in Hydra yet. It would be great if we can have some advance querying functionality like they have in graph databases.
+            SkillsRequired :
+              - Flask
+              - Python
+              - Sqlalchemy
+              - PostgreSQL
+              - Command Line
+              - Basic knowledge of Semantic Web and Graph Databases
+              - Basic knowledge of graph querying languages
+              - Ability to write test suites
+            DifficultyLevel : Intermediate
+            RelatedLinks:
+              - link:
+                  name: Hydrus Database Design
+                  url: https://github.com/HTTP-APIs/hydrus/wiki/Design#dbdesign
+              - link:
+                  name: Graph querying languages overview
+                  url: https://developer.ibm.com/dwblog/2017/overview-graph-database-query-languages/
+              - link:
+                  name: The Book of Hydrus
+                  url: https://gsocchrizandr.wordpress.com/the-book-of-hydrus
+              - link:
+                  name: Hydra Draft
+                  url: https://www.hydra-cg.com/spec/latest/core
+
+        - ideas:
+            sub_topic: More User defined Controls for the server
+            Description :
+              - There is no way right now to actually change the way the client accesses the server set up by Hydrus. Although there is some support for Authentication/Authorization, the actual implementations are very basic and do not offer much security features. There is also no way to control server access or limit/modify user privilege. There may be APIs that provide different levels of access to different users. There are also bottlenecks in place in REST APIs that limit the number of requests each user can make, such control is not given to users. There needs to be a way to add additional controls to the server, that can be built on top of the original Hydrus app.
+            SkillsRequired :
+              - Python
+              - Git
+              - Flask
+              - Strong knowledge of Authentication and Authorization in various APIs
+              - Basic knowledge of Semantic Web
+              - Ability to learn new technologies quickly
+              - Ability to write test suites
+            DifficultyLevel : Intermediate
+            RelatedLinks:
+              - link:
+                  name: Hydus Github Repo
+                  url: https://github.com/HTTP-APIs/hydrus
+
+        - ideas:
+            sub_topic: Support Redis as Graph database
+            Description:
+              - Graph based data is everywhere now days, Facebook, Google, Twitter and Pinterest are only a few who've realize the power behind relationship data and are utilizing it to the fullest, as a direct result we see a rise both in interest and variety of graph data solutions.
+              - RedisGraph is a graph database developed from scratch on top of Redis, using the new Redis Modules API to extend Redis with new commands and capabilities. Its main features include - Simple, fast indexing and querying - Data stored in RAM, using memory-efficient custom data structures - On disk persistence - Tabular result sets - Simple and popular graph query language (Cypher) - Data Filtering, Aggregation and ordering.
+              - Currently Hydrus uses a relational database model to store graph data. It would be interesting to switch to a graph databasee like Redis. We need to implement a multi-layered hexastore to store graph data. This will also help in the implementation of Idea 1.2 - Better API querying.
+            SkillsRequired :
+              - Python
+              - Git
+              - Flask
+              - Basic knowledge of graph databases
+              - Ability to learn new technologies quickly
+              - Basic knowledge of Semantic Web
+              - Ability to write test suites
+            DifficultyLevel : Intermediate
+            RelatedLinks:
+              - link:
+                  name: Redis Graph :- A graph database module for Redis
+                  url: http://redisgraph.io/design/
+              - link:
+                  name: Paper on representing and querying graphs using an hexastore.
+                  url: https://redis.io/topics/indexes#representing-and-querying-graphs-using-an-hexastore
+
+        - ideas:
+              sub_topic: Open API to Hydra Parser
+              Description:
+                - The OpenAPI Specification. (OAS) defines a standard, programming language-agnostic interface description for REST APIs, which allows both humans and computers to discover and understand the capabilities of a service without requiring access to source code, additional documentation, or inspection of network traffic.
+                - OpenAPI and Hydra do much of the same thing and it would be great to have an interface to convert OpenAPI definitions to Hydra API Documentation.
+              SkillsRequired :
+                - Python
+                - Flask
+                - HYDRA
+                - REST APIs
+                - Ability to learn new technologies quickly
+                - Basic knowledge of Semantic Web
+                - Ability to write test suites
+              DifficultyLevel : Intermediate
+              RelatedLinks:
+                - link:
+                    name: OpenAPI Spec
+                    url: https://github.com/OAI/OpenAPI-Specification
+                - link:
+                    name: Hydra Draft
+                    url: https://www.hydra-cg.com/spec/latest/core/
+
+        - ideas:
+            sub_topic: Keep Hydrus up-to-date with Hydra Specs
+            Description:
+              - Hydra Draft Specs (https://github.com/HydraCG/Specifications/issues) are evolving and Hydrus needs to follow the most recent updates in the Specs. Code has to be amended to implement new features.
+            SkillsRequired :
+              - Python
+              - Git
+              - Good Knowledge of Semantic Web and REST paradigm
+              - High problem-solving abilities
+              - Ability to write test suites
+            DifficultyLevel : Hard
+            RelatedLinks:
+              - link:
+                  name: Hydra Draft Specs
+                  url: https://github.com/HydraCG/Specifications/issues
+
+        - ideas:
+            sub_topic: Be Creative
+            Description:
+              - Have any ideas of your own? Please feel free to integrate those into your proposal. It'll help your proposal stand out and will increase your chances of being accepted.
+            SkillsRequired :
+              - To be decided ...
+            DifficultyLevel : Interesting
+
+  - Idea:
+        Topic : Ideas Related to Demos using Hydrus
+        sub_ideas:
+        - ideas:
+            sub_topic: Implement Satellite and Subsystems Demo
+            Description:
+              - We may finally end up implementing the astronomy/satellites vocabulary as thought in the beginning. We need a way to demonstrate how Hydra can be utilized by Satellites to communicate with each other and get information about each of their subsystems and statuses. The OWL Vocabulary for Subsystems is given here ->(https://github.com/chronos-pramantha/RDFvocab). We need to create a Hydra Spec for a demo system that will use these ontologies for a demo.
+            SkillsRequired :
+              - Python
+              - Linux
+              - Server Management
+              - At least basic knowledge of DevOps
+              - HTML, CSS, JS
+              - Knowledge of any Javascript framework is a plus ( React Js or Vue Js)
+              - Basic Knowledge of Semantic Web
+              - High problem-solving abilities
+              - Ability to write test suites
+            DifficultyLevel : Intermediate to Hard
+            RelatedLinks:
+              - link:
+                  name: Hydus Github Repo
+                  url: https://github.com/HTTP-APIs/hydrus
+              - link:
+                  name: A sample drone simulation
+                  url: https://github.com/HTTP-APIs/hydra-flock-demo
+
+        - ideas:
+            sub_topic: Improve the flock demo
+            Description:
+              - We had created a demo using drones and a forestry simulation that communicated in real time to measure temperatures in a forest region. There could be a lot of improvements added to this simulation to add more use cases for Hydra/Hydrus and implementing them in the simulation.
+            SkillsRequired :
+              - Python
+              - Linux
+              - Hydra
+              - Server Management
+              - At least basic knowledge of DevOps
+              - HTML, CSS, JS
+              - Knowledge of any Javascript framework is a plus ( React Js or Vue Js)
+              - Basic Knowledge of Semantic Web
+              - High problem-solving abilities
+              - Ability to write test suites
+            DifficultyLevel : Intermediate
+            RelatedLinks:
+              - link:
+                  name: Hydus Github Repo
+                  url: https://github.com/HTTP-APIs/hydrus
+              - link:
+                  name: A sample drone simulation
+                  url: https://github.com/HTTP-APIs/hydra-flock-demo
+
+        - ideas:
+            sub_topic: Implement demos for early stage API standards
+            Description:
+              - There are many early stage API standards such as WFS-3.0 or Open-EO that are developed for geospatial applications. A cool demo could be developed that uses some geospatial application built using these standards and ports it to Hydrus. This idea is not limited to geo-spatial domains. You could use any API standard that allows two applications to communicate and use Hydra/Hydrus as an interface between them.
+            SkillsRequired :
+              - Python
+              - Linux
+              - Hydra and Hydrus
+              - OpenEO/WFS/Any other API Standard for some application
+              - Basic Knowledge of Semantic Web and Hydra
+              - Ability to write test suites
+            DifficultyLevel : Intermediate
+            RelatedLinks:
+              - link:
+                  name: Hydrus
+                  url: https://github.com/HTTP-APIs/hydrus
+              - link:
+                  name: WFS
+                  url: https://github.com/opengeospatial/WFS_FES
+              - link:
+                  name: OpenEO
+                  url: http://r-spatial.org/2016/11/29/openeo.html
+
+        - ideas:
+            sub_topic: Demonstration with Dynamic API paths
+            Description:
+              - If we can create an API whose structure(paths to different kinds of data) is constantly changing only the vocab path stays same. Then we can use a Hydra client to discover the required paths for various kinds of data. This can be a great way to demonstrate the capabilities and use cases of HTTP-APIs and Hydra in general. We can have a UI showing the API structure in real-time and allow users to POST/GET/PUT/DELETE any type of data. We can also show how the client and API server interact with each other ( We had a lot of requests going on in the drone demo and it was very difficult to understand how things are working in the background). For example Suppose we have a Student class with basic properties like Name, Id, Class etc. Then the user can request for data say "Students with Id = 1*" without knowing anything about the API structure as it's dynamic. We can also demonstrate advanced querying features with this.
+            SkillsRequired :
+              - Python
+              - Linux
+              - Server Management
+              - At least basic knowledge of DevOps
+              - HTML, CSS, JS
+              - Knowledge of any Javascript framework is a plus ( React Js or Vue Js)
+              - Basic Knowledge of Semantic Web
+              - High problem-solving abilities
+              - Ability to write test suites
+            DifficultyLevel : Intermediate to Hard
+            RelatedLinks:
+              - link:
+                  name: Hydus Github Repo
+                  url: https://github.com/HTTP-APIs/hydrus
+              - link:
+                  name: A sample drone simulation
+                  url: https://github.com/HTTP-APIs/hydra-flock-demo
+
+        - ideas:
+            sub_topic: Rail Management System
+            Description:
+              - We can have a cool demo about railway management where trains are routed based on available tracks and are assigned platforms and routes based on live information taken from several trains. This could be a good demo to showcase how Hydra can be used as a generic language since not all railway stations would use the same API to convey information to trains. We could have multiple Hydra based APIs running on railway stations and trains and all of them communicating with each other using Hydra and a common Vocabulary. We still need to find a vocabulary for this, or we could also create one.
+            SkillsRequired :
+              - Python
+              - Linux
+              - Server Management
+              - At least basic knowledge of DevOps
+              - HTML, CSS, JS
+              - Knowledge of any Javascript framework is a plus ( React Js or Vue Js)
+              - Basic Knowledge of Semantic Web
+              - High problem-solving abilities
+              - Ability to write test suites
+            DifficultyLevel : Intermediate to Hard
+            RelatedLinks:
+              - link:
+                  name: Hydus Github Repo
+                  url: https://github.com/HTTP-APIs/hydrus
+              - link:
+                  name: A sample drone simulation
+                  url: https://github.com/HTTP-APIs/hydra-flock-demo
+
+  - Idea:
+      Topic : Python Client Implementation
+      Description:
+        - Implement a generic Hydra client that can reference an API Documentation and allow users to interact with an API using objects, rather than URIs/paths. The HydraConsole is a good reference client to use, and we could extend functionality and implement a Python version of it. More ideas are welcome on this.
+      SkillsRequired :
+        - Strong Knowledge of Graphs
+        - At least basic knowledge of RDF
+        - JSON and JSON-LD
+        - Python
+        - Command Line
+        - Basic knowledge of Semantic Web
+        - Ability to learn new technologies quickly
+        - Ability to write test suites
+      DifficultyLevel : Intermediate to Hard
+      RelatedLinks:
+        - link:
+            name: Current implementation by @pchampin
+            url: https://github.com/pchampin/hydra-py
+        - link:
+            name: RDF overview
+            url: https://www.w3.org/RDF/
+        - link:
+            name: JSON-LD wiki
+            url: https://en.wikipedia.org/wiki/JSON-LD
+        - link:
+            name: The Book of Hydrus
+            url: https://gsocchrizandr.wordpress.com/the-book-of-hydrus
+        - link:
+            name: Hydra Draft
+            url: https://www.hydra-cg.com/spec/latest/core
+        - link:
+            name: Hydra Console
+            url: https://www.markus-lanthaler.com/hydra/console/
+
+  - Idea:
+      Topic : Support Falcon based server
+      Description:
+        - Falcon is a minimalist WSGI library for building speedy web APIs and app backends. When it comes to building HTTP APIs, other frameworks weigh you down with tons of dependencies and unnecessary abstractions. Falcon cuts to the chase with a clean design that embraces HTTP and the REST architectural style. Hydrus is currently implemented using Flask, we're thinking about switching to Falcon.
+      SkillsRequired :
+        - Python
+        - Git
+        - Sqlalchemy
+        - Falcon Web Framework
+        - Command Line
+        - Basic knowledge of Semantic Web
+        - Ability to learn new technologies quickly
+        - Ability to write test suites
+      DifficultyLevel : Intermediate
+      RelatedLinks:
+        - link:
+            name: Falcon Docs
+            url: https://falcon.readthedocs.io/en/latest/
+        - link:
+            name: Creating resource with Falcon
+            url: https://falcon.readthedocs.io/en/latest/user/tutorial.html#creating-resources
+        - link:
+            name: Hydus Github Repo
+            url: https://github.com/HTTP-APIs/hydrus
+
+  - Idea:
+      Topic : Django-rest-hydra
+      Description:
+        - Hydrus is developed in Flask because the applications we had in mind were mostly related to IoT and sensors, so it was supposed to be lightweight and functional. But if we may want to look for more traditional applications and the wider public, we may like to have a Django library ( http://hirokiky.org/tech/create_django_library.html ) that does have the same features as hydrus but works with Django.
+        - As Django has already a well-established REST library (Django-rest) it would be probably useful to extend it and create something like Django-rest-hydra, a library that let Django developers deploy hydra server in Django as now hydrus does with flask (starting from an RDF vocabulary or an OpenAPI definition).
+        - Note -> How to create a Django middleware.(https://simpleisbetterthancomplex.com/tutorial/2016/07/18/how-to-create-a-custom-django-middleware.html)
+      SkillsRequired :
+        - Python
+        - Git
+        - Django
+        - Django rest
+        - Basic knowledge of Semantic Web
+        - Ability to write test suites
+      DifficultyLevel : Intermediate
+      RelatedLinks:
+        - link:
+            name: Creating a Django Library
+            url: http://hirokiky.org/tech/create_django_library.html
+        - link:
+            name: How to create a Django middleware.
+            url: https://simpleisbetterthancomplex.com/tutorial/2016/07/18/how-to-create-a-custom-django-middleware.html
+        - link:
+            name: Django rest framework
+            url: http://www.django-rest-framework.org/
+
+  - Idea:
+      Topic : Create a QGIS plugin
+      Description:
+        - Create a QGIS plugin that works with hydrus. QGIS is an opensource geospatial client, geospatial clients are used to load maps in different formats (images, rasters, vectors). QGIS can work as an HTTP client to fetch data from special Web services called OGC Web Standards (WMS, WMTS, WFS). Plugin for QGIS can be developed in Python, a QGIS-HYDRA plugin may be able to query geospatial data stored in hydrus using the HYDRA vocabulary. The same functionality could be accomplished with.
+      SkillsRequired :
+        - Python
+        - Git
+        - Basic Knowledge of Semantic Web
+        - Good Knowledge of GIS software ecosystem
+        - High problem-solving abilities
+        - Ability to write test suites
+      DifficultyLevel : Hard
+      RelatedLinks:
+        - link:
+            name: QGIS Homepage
+            url: https://qgis.org/en/site/
+        - link:
+            name: QGIS Github Repo
+            url: https://github.com/qgis
+        - link:
+            name: OpenGeoSpatial Consortium Web standards
+            url: https://en.wikipedia.org/wiki/Open_Geospatial_Consortium#Standards

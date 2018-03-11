@@ -1,0 +1,74 @@
+<div class="px-1 py-1 pb-md-4 mx-auto">
+  <a class="anchor" id="ideas"></a>
+  <h1 class="display-4">Project Ideas</h1>
+  <br>
+  <p class="lead font-weight-normal"> <b>NOTE:</b> Every student should apply for any (up to three) of the macro-task (ideas) listed below. Every macro-task involves participating in different activities (listed for every task). Students can build a proposal by choosing a macro-task and then
+    detail which activities and how they want to carry on.</p>
+  <br>
+  {% for i in range(0,total) %}
+  <h2>{{i+1}}. {{idea[i]['Idea']['Topic']}}</h2>
+    <hr>
+    <br>
+    {% if  idea[i]['Idea']['sub_ideas'] %}
+              {% for j in range(0,idea[i]['Idea']['sub_ideas'] | length) %}
+              <div class="idea">
+                <h3>{{i+1}}.{{j+1}}   {{idea[i]['Idea']['sub_ideas'][j]['ideas']['sub_topic']}}</h3>
+                <br>
+                <h4>Description</h4>
+                <p class="lead font-weight-normal">
+                    {% for para in idea[i]['Idea']['sub_ideas'][j]['ideas']['Description'] %}
+                                  {{para}} <br>
+                    {% endfor %}
+                </p>
+                <h4>Skills Required</h4>
+                <ul class="lead font-weight-normal">
+                  {% for skill in idea[i]['Idea']['sub_ideas'][j]['ideas']['SkillsRequired'] %}
+                        <li> {{skill}} </li>
+                  {% endfor %}
+                </ul>
+                <h4>Difficulty Level - {{idea[i]['Idea']['sub_ideas'][j]['ideas']['DifficultyLevel']}}</h4>
+                <h4>Related Links</h4>
+                <ul class="lead font-weight-normal">
+                      {% for link in idea[i]['Idea']['sub_ideas'][j]['ideas']['RelatedLinks'] %}
+                            <li><a href ="{{link['link'].url}}"> {{link['link'].name}} </a></li>
+                      {% endfor %}
+                </ul>
+                <h4>Potential Mentors</h4>
+                <p class="lead font-weight-normal">
+                  {% for mentor in idea[0]['Idea']['sub_ideas'][0]['ideas']['PotentialMentors'] %}
+                        <a href ="{{mentor['mentor'].url}}"> {{mentor['mentor'].name}} </a>
+                  {% endfor %}
+                </p>
+                <hr>
+              </div>
+            {% endfor %}
+      {% else %}
+          <h4>Description</h4>
+          <p class="lead font-weight-normal">
+              {% for para in idea[i]['Idea']['Description'] %}
+                            {{para}} <br>
+              {% endfor %}
+          </p>
+          <h4>Skills Required</h4>
+          <ul class="lead font-weight-normal">
+            {% for skill in idea[i]['Idea']['SkillsRequired'] %}
+                  <li> {{skill}} </li>
+            {% endfor %}
+          </ul>
+          <h4>Difficulty Level - {{idea[i]['Idea']['DifficultyLevel']}}</h4>
+          <h4>Related Links</h4>
+          <ul class="lead font-weight-normal">
+                {% for link in idea[i]['Idea']['RelatedLinks'] %}
+                      <li><a href ={{link['link'].url}}> {{link['link'].name}} </a></li>
+                {% endfor %}
+          </ul>
+          <h4>Potential Mentors</h4>
+          <p class="lead font-weight-normal">
+            {% for mentor in idea[0]['Idea']['sub_ideas'][0]['ideas']['PotentialMentors'] %}
+                  <a href ="{{mentor['mentor'].url}}"> {{mentor['mentor'].name}} </a>
+            {% endfor %}
+          </p>
+          <hr>
+      {% endif %}
+  {% endfor %}
+</div>
