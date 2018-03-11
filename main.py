@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, make_response,render_template, redirect
+from flask import Flask, request, jsonify, make_response, render_template, redirect
 import yaml
 
 DEBUG = False
@@ -12,11 +12,11 @@ def handler():
         try:
             yaml_text = yaml.load(stream)
         except yaml.YAMLError as exc:
-            print(exc)
+            raise exc
     # parse the YAML file into a variables
     idea = yaml_text['content']
     total = len(idea)
-    return render_template("index.html", idea=idea, total =total)
+    return render_template("index.html", idea=idea, total=total)
 
 
 if __name__ == '__main__':
