@@ -1,11 +1,11 @@
 content:
   - Idea:
-      Topic: Ideas related to improving Hydrus
+      Topic: Ideas related to improving hydrus
       sub_ideas:
         - ideas:
-            sub_topic: Design a Command line interface for Hydrus
+            sub_topic: Design a Command line interface for hydrus
             Description :
-              - Although Hydrus is primarily a Python-based library right now, most Hydra users may not be familiar with Python to set up servers. It would be great if we could have a CLI for Hydrus where users would just need to pass parameters to set up a server and get it up and running. Also, the current process of server setup is long and needs a lot of prerequisite knowledge to be able to set up. This process needs to be abstracted to make it simpler, and more powerful for a user to have more control over the server. Maybe something similar to Python’s SimpleHTTPServer.
+              - Although hydrus is primarily a Python-based library right now, most Hydra users may not be familiar with Python to set up servers. It would be great if we could have a CLI for Hydrus where users would just need to pass parameters to set up a server and get it up and running. Also, the current process of server setup is long and needs a lot of prerequisite knowledge to be able to set up. This process needs to be abstracted to make it simpler, and more powerful for a user to have more control over the server. Maybe something similar to Python’s SimpleHTTPServer.
             SkillsRequired :
               - Python
               - Git
@@ -17,13 +17,13 @@ content:
             DifficultyLevel : Easy to Intermediate
             RelatedLinks:
               - link:
-                  name: Hydrus Repo
+                  name: hydrus Repo
                   url: https://github.com/HTTP-APIs/hydrus
               - link:
-                  name: Hydrus Wiki
+                  name: hydrus Wiki
                   url: https://github.com/HTTP-APIs/hydrus/wiki
               - link:
-                  name: The Book of Hydrus
+                  name: The Book of hydrus
                   url: https://gsocchrizandr.wordpress.com/the-book-of-hydrus
               - link:
                   name: Hydra Draft
@@ -61,13 +61,13 @@ content:
             DifficultyLevel : Intermediate
             RelatedLinks:
               - link:
-                  name: Hydrus Database Design
+                  name: hydrus Database Design
                   url: https://github.com/HTTP-APIs/hydrus/wiki/Design#dbdesign
               - link:
                   name: Graph querying languages overview
                   url: https://developer.ibm.com/dwblog/2017/overview-graph-database-query-languages/
               - link:
-                  name: The Book of Hydrus
+                  name: The Book of hydrus
                   url: https://gsocchrizandr.wordpress.com/the-book-of-hydrus
               - link:
                   name: Hydra Draft
@@ -76,7 +76,7 @@ content:
         - ideas:
             sub_topic: More User defined Controls for the server
             Description :
-              - There is no way right now to actually change the way the client accesses the server set up by Hydrus. Although there is some support for Authentication/Authorization, the actual implementations are very basic and do not offer much security features. There is also no way to control server access or limit/modify user privilege. There may be APIs that provide different levels of access to different users. There are also bottlenecks in place in REST APIs that limit the number of requests each user can make, such control is not given to users. There needs to be a way to add additional controls to the server, that can be built on top of the original Hydrus app.
+              - There is no way right now to actually change the way the client accesses the server set up by hydrus. Although there is some support for Authentication/Authorization, the actual implementations are very basic and do not offer much security features. There is also no way to control server access or limit/modify user privilege. There may be APIs that provide different levels of access to different users. There are also bottlenecks in place in REST APIs that limit the number of requests each user can make, such control is not given to users. There needs to be a way to add additional controls to the server, that can be built on top of the original Hydrus app.
             SkillsRequired :
               - Python
               - Git
@@ -96,7 +96,7 @@ content:
             Description:
               - Graph based data is everywhere now days, Facebook, Google, Twitter and Pinterest are only a few who've realize the power behind relationship data and are utilizing it to the fullest, as a direct result we see a rise both in interest and variety of graph data solutions.
               - RedisGraph is a graph database developed from scratch on top of Redis, using the new Redis Modules API to extend Redis with new commands and capabilities. Its main features include - Simple, fast indexing and querying - Data stored in RAM, using memory-efficient custom data structures - On disk persistence - Tabular result sets - Simple and popular graph query language (Cypher) - Data Filtering, Aggregation and ordering.
-              - Currently Hydrus uses a relational database model to store graph data. It would be interesting to switch to a graph databasee like Redis. We need to implement a multi-layered hexastore to store graph data. This will also help in the implementation of Idea 1.2 - Better API querying.
+              - Currently hydrus uses a relational database model to store graph data. It would be interesting to switch to a graph databasee like Redis. We need to implement a multi-layered hexastore to store graph data. This will also help in the implementation of Idea 1.2 - Better API querying.
             SkillsRequired :
               - Python
               - Git
@@ -137,9 +137,9 @@ content:
                     url: https://www.hydra-cg.com/spec/latest/core/
 
         - ideas:
-            sub_topic: Keep Hydrus up-to-date with Hydra Specs
+            sub_topic: Keep hydrus up-to-date with Hydra Specs
             Description:
-              - Hydra Draft Specs (https://github.com/HydraCG/Specifications/issues) are evolving and Hydrus needs to follow the most recent updates in the Specs. Code has to be amended to implement new features.
+              - Hydra Draft Specs (https://github.com/HydraCG/Specifications/issues) are evolving and hydrus needs to follow the most recent updates in the Specs. Code has to be amended to implement new features.
             SkillsRequired :
               - Python
               - Git
@@ -161,7 +161,7 @@ content:
             DifficultyLevel : Interesting
 
   - Idea:
-        Topic : Ideas Related to Demos using Hydrus
+        Topic : Ideas Related to Demos using hydrus
         sub_ideas:
         - ideas:
             sub_topic: Implement Satellite and Subsystems Demo
@@ -189,7 +189,7 @@ content:
         - ideas:
             sub_topic: Improve the flock demo
             Description:
-              - We had created a demo using drones and a forestry simulation that communicated in real time to measure temperatures in a forest region. There could be a lot of improvements added to this simulation to add more use cases for Hydra/Hydrus and implementing them in the simulation.
+              - We had created a demo using drones and a forestry simulation that communicated in real time to measure temperatures in a forest region. There could be a lot of improvements added to this simulation to add more use cases for Hydra/hydrus and implementing them in the simulation.
             SkillsRequired :
               - Python
               - Linux
@@ -213,18 +213,18 @@ content:
         - ideas:
             sub_topic: Implement demos for early stage API standards
             Description:
-              - There are many early stage API standards such as WFS-3.0 or Open-EO that are developed for geospatial applications. A cool demo could be developed that uses some geospatial application built using these standards and ports it to Hydrus. This idea is not limited to geo-spatial domains. You could use any API standard that allows two applications to communicate and use Hydra/Hydrus as an interface between them.
+              - There are many early stage API standards such as WFS-3.0 or Open-EO that are developed for geospatial applications. A cool demo could be developed that uses some geospatial application built using these standards and ports it to hydrus. This idea is not limited to geo-spatial domains. You could use any API standard that allows two applications to communicate and use Hydra/hydrus as an interface between them.
             SkillsRequired :
               - Python
               - Linux
-              - Hydra and Hydrus
+              - Hydra and hydrus
               - OpenEO/WFS/Any other API Standard for some application
               - Basic Knowledge of Semantic Web and Hydra
               - Ability to write test suites
             DifficultyLevel : Intermediate
             RelatedLinks:
               - link:
-                  name: Hydrus
+                  name: hydrus
                   url: https://github.com/HTTP-APIs/hydrus
               - link:
                   name: WFS
